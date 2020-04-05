@@ -1,0 +1,95 @@
+.wrapper{
+display: flex;
+flex-direction:column;
+min-height: 100vh;
+
+
+}
+
+.wrapper > * {
+    padding: 20px
+    
+}
+
+.userbut{
+    flex-grow: 1;
+    background-color:lightgreen;
+    position: static;
+    margin-top:80px;
+}
+
+
+
+
+.main{
+    flex-grow: 1;
+    background-color:lightgreen;
+    /* create flex container */
+    display: flex;
+    padding: 10px 20px;
+    /* fitting items for responsiveness */
+    flex-wrap: wrap;
+    /* how items align */
+    justify-content: space-evenly;
+}
+
+.card{
+    border: 1px solid lime;
+    width: 400px;
+    min-width: 300px;
+    height:500px;
+    min-height:400px;
+    margin: 1%;
+    background-color: limegreen;
+    border-radius: 25px;
+    opacity: 0.9;
+}
+
+.card:hover{
+    opacity: 1.0;
+    background-color: lime;
+}
+
+
+.card-img-top {
+    opacity: 0.7;
+    border-radius: 50%;
+    width:70%;
+    height:45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    }
+      
+.card-img-top:hover {
+    opacity: 1.0;
+  }
+
+  .card-text{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    }
+
+.card-text:hover {
+    color:brown;
+    }
+
+
+.card-title{
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    }
+
+.card-title:hover {
+    color: lightskyblue;
+    }
+
+
+.footer{
+    background-color: brown;
+    height:30px;
+    text-align: center;
+    color: lightgreen;
+
+   }
