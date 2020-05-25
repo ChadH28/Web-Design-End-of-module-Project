@@ -14,12 +14,10 @@
     <title>End of Module Project Rework</title>
 </head>
 <body>
-
     <!-- Start of wrapper -->
     <div class ="wrapper">
-
         <!-- Start of navbar -->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-success fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-secondary fixed-top">
             <a class="navbar-brand" href="#">
                 <img src="lmjaaaaaas.png" alt="logo" style="width:50px; height: 40px;border-radius: 50%;">
             </a>
@@ -46,21 +44,22 @@
                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Paul Mall</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Elana Rhoades</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Marlene soetwater</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#addu"><i class="fa fa-user"></i> Add User</a>                    
+                    <a class="dropdown-item" href="#addu" data-toggle="modal" data-target="#addu"><i class="fa fa-user"></i> Add User</a>                    
                   </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Admin</a>
+                    <a class="nav-link disabled" href="#">Admin</a>
                 </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <a class="footer-link" href="#"><i class="fa fa-facebook-official"></i></a>
-                    <a class="footer-link" href="#"><i class="fa fa-instagram"></i></a>
-                    <a class="footer-link" href="#"><i class="fa fa-twitter"></i></a>
-                    <button type="button" class="btn btn-success"data-toggle="modal" data-target="#loginmodal">
+                <form class="form-inline my-2 my-sm-2">
+                    <a class="nav-link" href="#"><i class="fa fa-facebook-official"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-reddit"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#loginmodal">
                     Sign In <i class="fa fa-user"></i>
                     </button>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addu">
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addu">
                     Sign Up / Add User <i class="fa fa-user"></i>
                     </button>
                 </form>               
@@ -68,48 +67,46 @@
             </div>
         <!-- End of navbar -->
         </nav>
-
         <header class="header">
             <form class="form-inline my-2 my-lg-0"></form>
             <h1>Welcome to lmj, a place where you can laugh you 
                 <input class="typebox" type="search" placeholder="_________." aria-label="Search"></h1>
             </form>
+            <section>
+                <iframe class="iframe" src="https://www.youtube.com/embed/B7R8FWekrI0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </section>
         </header>
-               
         <!-- content of webpage -->
         <main class="main">
-
             <!-- The Modal for Add User -->
             <div class="modal fade" id="addu">
                 <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
-          
                         <!-- Modal for Add User Header -->
                         <div class="modal-header">
                             <h2 class="modal-title">Personal Info</h2>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <button type="reset" class="close" data-dismiss="modal">&times;</button>
                         </div>
-            
                         <!-- Modal for Add User body -->
                         <div class="modal-body">
                         <!-- Form for profile picture --> 
                             <form>
-                                <h4 class="card-title">Profile Picture</h4>
+                                <h2 class="modal-title">Profile Picture</h2>
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="customFile" name="disp_p">
-                                    <label class="custom-file-label" for="customFile">Choose Picture</label>
+                                    <label class="custom-file-label" for="customFile"> Choose Picture</label>
                                 </div>
                             </form>
-                                    <!-- Form for details and further details -->
-                            <form class="was-validated">
+                            <!-- sign-up Form for details and further details -->
+                            <form class="was-validated" method="GET" action="signup.html">
                                 <br>
-                                <h4 class="card-title">Details</h4>
+                                <h2 class="modal-title">Details</h2>
                                 <div class="form-group">
-                                    <label for="fname">Full Name:</label>
-                                    
+                                    <label for="fname">Full Name:</label>                                    
                                     <input type="text" class="form-control" id="fname" placeholder="Enter First and Last Name" name="fname" required>   
                                         <div class="valid-feedback">Thank You</div>
-                                        <div class="invalid-feedback">Please enter required information.</div>
+                                        <div class="invalid-feedback">Please enter required information only using letters.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="E-Mail">E-Mail address:</label>
@@ -121,15 +118,15 @@
                                     <label for="cnum">Cellphone number:</label>
                                     <input type="number" class="form-control" id="cnum" placeholder="Enter Cellphone number" name="cnum" required>
                                         <div class="valid-feedback">Thank You</div>
-                                        <div class="invalid-feedback">Please enter required information.</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
                                 </div>   
                                 <div class="form-group">
                                     <label for="lnum">Landline number:</label>
                                     <input type="tel" class="form-control" id="lnum" placeholder="Enter Landline number" name="lnum" required>
                                         <div class="valid-feedback">Thank You</div>
-                                        <div class="invalid-feedback">Please enter required information.</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
                                 </div>
-                                <h4 class="card-title">Further Details</h4> 
+                                <h2 class="modal-title">Further Details</h2> 
                                 <div class="form-group">
                                     <label for="addr">Home Adress:</label>
                                     <input type="text" class="form-control" id="addr" placeholder="Enter Home Address" name="addr" required>
@@ -140,7 +137,7 @@
                                     <label for="fname">Next of kin's Name and Surname:</label>
                                     <input type="text" class="form-control" id="fname" placeholder="Enter First and Last Name" name="fname" required>
                                         <div class="valid-feedback">Thank You</div>
-                                        <div class="invalid-feedback">Please enter required information.</div>
+                                        <div class="invalid-feedback">Please enter required information only using letters.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="rela">Next of kin's relationship:</label>
@@ -152,7 +149,7 @@
                                     <label for="cnum">Next of kin's Cellphone number:</label>
                                     <input type="number" class="form-control" id="cnum" placeholder="Enter Cellphone number" name="cnum" required>
                                         <div class="valid-feedback">Thank You</div>
-                                        <div class="invalid-feedback">Please enter required information.</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="E-Mail">Next of kin's E-Mail address:</label>
@@ -160,13 +157,24 @@
                                         <div class="valid-feedback">Thank You</div>
                                         <div class="invalid-feedback">Please enter required information.</div>
                                 </div>
+                                <h2 class="modal-title">Password</h2>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me?
+                                    </label>
+                                </div>
                                 <button type="submit" class="formbutton">Submit</button>
                             </form>
                         </div>
-      
                         <!-- Modal for Add User footer -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                            <button type="reset" class="btn btn-success" data-dismiss="modal">Cancel</button>
                         </div>
                     <!-- End of modal -->
                     </div>
@@ -194,33 +202,42 @@
             <div class="modal fade" id="loginmodal" >
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                    <form method="post">
+                    <form class="was-validated" method="GET" action="signin.html">
                         <div class="imgcontainer">
                             <img src="usera.png" alt="Avatar" class="avatar">
                         </div>
                         <div class="formcontainer">
-                            <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="uname" required>             
-                            <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            <div class="form-group">
+                                <label for="uname">Username:</label>
+                                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Remember me?
+                                </label>
+                            </div>
                             <button type="submit" class="formbutton">Login</button>
-                            <label>
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
+                            <span>Need an account? <a href="#addu" data-toggle="modal" data-target="#addu">Sign up</a></span>
                         </div>
+                    </form>               
                         <div class="formcontainer" style="background-color:#f1f1f1">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            <span class="psw" style="float: left;">Forgot <a href="#">password?</a></span>
+                            <button type="reset" class="btn btn-success" style="float: right;" data-dismiss="modal">Cancel</button>
                         </div>
-                    </form>
                     </div>
                 </div>
             </div>
-
             <!-- Card/User 1 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Mary Hopkins.jpg" alt="User image">
-
                 <!-- The Card Body with the Persons fullname as a title -->
                 <div class="card-body">
                     <h4 class="card-title">Mary Hopkins</h4>
@@ -241,7 +258,7 @@
             <!-- card close -->
             </div>
                 <!-- The user1 further details Modal -->
-                <div class="modal" id="user1Modal">
+                <div class="modal fade" id="user1Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -270,7 +287,7 @@
                 <!-- closing of modal -->
                 </div>
             <!-- Card/User 2 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Felix Brown.jpg" alt="User image">
 
                 <!-- The Card Body with the Persons fullname as a title -->
@@ -294,7 +311,7 @@
             <!-- card close -->           
             </div>
                 <!-- The user2 further details Modal -->
-                <div class="modal" id="user2Modal">
+                <div class="modal fade" id="user2Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -323,7 +340,7 @@
                 <!-- closing of modal -->
                 </div>
             <!-- Card/User 3 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Cassidy Creek.jpg" alt="User image">
 
                 <!-- The Card Body with the Persons fullname as a title -->
@@ -346,7 +363,7 @@
             <!-- card close --> 
             </div>
                 <!-- The user3 further details Modal -->
-                <div class="modal" id="user3Modal">
+                <div class="modal fade" id="user3Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -375,7 +392,7 @@
                 <!-- closing of modal -->
                 </div>
             <!-- Card 4 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Paul Mall.jpg" alt="User image">
 
                 <!-- The Card Body with the Persons fullname as a title -->
@@ -398,7 +415,7 @@
             <!-- card close --> 
             </div>
                 <!-- The user4 further details Modal -->
-                <div class="modal" id="user4Modal">
+                <div class="modal fade" id="user4Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -427,7 +444,7 @@
                 <!-- closing of modal -->
                 </div>
             <!-- Card 5 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Elana.jpg" alt="User image">
 
                 <!-- The Card Body with the Persons fullname as a title -->
@@ -450,7 +467,7 @@
             <!-- card close --> 
             </div>
                 <!-- The user5 further details Modal -->
-                <div class="modal" id="user5Modal">
+                <div class="modal fade" id="user5Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -478,9 +495,8 @@
                     </div>
                 <!-- closing of modal -->
                 </div>
-
             <!-- Card 6 -->
-            <div class="card card-dismissible">
+            <div class="card">
                 <img class="card-img-top" src="Marlene.jpg" alt="User image">
 
                 <!-- The Card Body with the Persons fullname as a title -->
@@ -503,7 +519,7 @@
             <!-- card close --> 
             </div>
                 <!-- The user6 further details Modal -->
-                <div class="modal" id="user6Modal">
+                <div class="modal fade" id="user6Modal">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -532,41 +548,42 @@
                 <!-- closing of modal -->
                 </div>
         </main>
-
         <!-- footer content -->
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-sm-3">
                         <img src="lmjaaaaaas.png" alt="logo" style="width:150px; height: 150px;border-radius: 50%;justify-content: center;">
-                        <h4>Ready to try lmj? It's free!</h4>
-                        <h6><a class="footer-link" href="#" data-toggle="modal" data-target="#addu">Sign Up HERE!</a></h6>
+                        <h6 style="justify-content: center;">© 2020 lmj Copyright:</h6>
+                        <h6 style="justify-content: center;">Ready to try lmj? It's free!</h6>
+                        <h6 style="justify-content: center;"><a class="footer-link" href="#" data-toggle="modal" data-target="#addu">Sign Up HERE!</a></h6>
                     </div>
                     <div class="col-sm-3">
-                        <h4>Features</h4>
-                        <a class="footer-link" href="#">About the movement</a>
-                        <a class="footer-link" href="#">Customer Reviews</a>
-                        <a class="footer-link" href="#">Cancelation policy</a>
+                        <ul><h4>Features</h4></ul>
+                        <ul><a class="footer-link" href="#">About the movement</a></ul>
+                        <ul><a class="footer-link" href="#">FAQ's</a></ul>
+                        <ul><a class="footer-link" href="#">Support us</a></ul>
+                    </li>
                     </div>
                     <div class="col-sm-3">
-                        <h4>Quick Contact</h4>
-                        <p><i class="fa fa-phone-square"></i> (021) 596 2478</p>
-                        <p><i class="fa fa-envelope"></i> Abstraction@gmail.com</p>
-                        <p><i class="fa fa-home"></i> 80 Surrey Hills, Welligton. 7506</p>
+                        <ul><h4>Quick Contact</h4></ul>
+                        <ul><p><i class="fa fa-phone-square"></i> (021) 596 2478</p></ul>
+                        <ul><p><i class="fa fa-envelope"></i> lmj@gmail.com</p></ul>
+                        <ul><p><i class="fa fa-home"></i> 80 Surrey Hills, Welligton. 7506</p></ul>
+                        <ul><a class="footer-link" href="#Top">Up<i class="fa fa-arrow-up"></i></a></ul>
                     </div>
-                    <div class="col-sm-2">
-                        <h4>Follow us</h4>
-                        <a class="footer-link" href="#"><i class="fa fa-facebook-official"></i> Abstract/facebook.com</a>
-                        <a class="footer-link" href="#"><i class="fa fa-instagram"></i> Abstract/instagram.com</a>
-                        <a class="footer-link" href="#"><i class="fa fa-twitter"></i> Abstract/twitter.com</a>
+                    <div class="col-sm-3">
+                        <ul><h4>Follow us</h4></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-facebook-official"></i> lmj/facebook.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-instagram"></i> lmj/instagram.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-reddit"></i> lmj/reddit.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-twitter"></i> lmj/twitter.com</a></ul>
                     </div>
                 </div>
             </div>
         </footer>
-
     <!-- End of wrapper -->    
     </div>
-
     <!-- The Js applied Before closing body tag for performance -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
