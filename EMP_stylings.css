@@ -1,0 +1,221 @@
+/* wrapper stylings for mobile responsiveness */
+.wrapper{
+  display: flex;
+  flex-direction:column;
+  min-height: 100vh;
+  }
+.wrapper > .main,.footer{
+  padding: 20px
+  }
+
+/* navbar stylings */
+.form-inline > *{
+  padding: 5px;
+  margin-left: 5px;
+  }
+.nav-link{
+  color: white;
+  }
+.dropdown-item{
+  opacity: 1;
+  color: white;
+  }
+.dropdown-menu{
+  opacity: 0.8;
+  background-color: grey;
+  }
+.navbar > * :hover{
+  color: orangered;
+  }
+
+/* main header stylings */
+.header{
+  margin-top:50px;
+  color: white;
+  background-color:rgb(3, 42, 82);
+  }
+.header > *{
+  flex-grow: 1;
+  background-color:rgb(3, 42, 82);
+  padding: 30px 20px;
+  /* create flex container */
+  display: flex;
+  /* fitting items for responsiveness */
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+.typebox{
+  width: 300px;
+  height: 60px;
+  color: orangered;
+  background-color:rgb(3, 42, 82);
+  border: none
+  }
+/* iframe stylings */
+.iframe{
+  width: 600px;
+  min-width: 300px;
+  height: 400px;
+  min-height:400px;
+  opacity: 0.8;
+  box-shadow: 0 4px 8px rgb(28, 89, 151);
+  transition: transform .2s;
+  }
+.iframe:hover{
+  opacity: 1;
+  -ms-transform: scale(1.025); /* IE 9 */
+  -webkit-transform: scale(1.025); /* Safari 3-8 */
+  transform: scale(1.025); 
+  }
+
+/* main menu stylings */
+.main{
+  flex-grow: 1;
+  background-color:rgb(3, 42, 82);
+  /* create flex container */
+  display: flex;
+  padding: 10px 20px;
+  /* fitting items for responsiveness */
+  flex-wrap: wrap;
+  /* how items align */
+  justify-content: space-evenly;
+  }
+/* card stylings */
+.card{
+  box-shadow: 0 4px 8px rgb(28, 89, 151);
+  border: none;
+  width: 400px;
+  min-width: 300px;
+  height:500px;
+  min-height:400px;
+  margin: 1%;
+  text-align: center;
+  background-color:orange;
+  border-radius: 25px;
+  transition: transform .2s;
+  }
+.card:hover{
+  opacity: 1.0;
+  background-color:orange;
+  border: dotted orangered;
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05); 
+  }
+.card-img-top{
+  opacity: 0.9;
+  border-radius: 50%;
+  width:70%;
+  height:45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  }   
+.card-img-top:hover{
+  opacity: 1.0;
+  }
+.card-title{
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  }
+.card-title:hover {
+  cursor: grabbing;
+  }
+.card-text{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+.card-text:hover{
+  color:orangered;
+  cursor: grab;
+  }
+/* stylings for footer */
+.footer, .footer-link{
+  background-color:rgb(85, 82, 82);
+  color:whitesmoke;
+  }
+/* removed underline and added a grab cursor for unity lol */
+.footer-link:hover {
+  color: orangered;
+  text-decoration: none;
+  cursor: grabbing;
+  }
+  
+/* Set a style for sign in and sign up login and submit buttons */
+.formbutton {
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  }
+/* hover for all buttons */
+.formbutton:hover, .btn:hover{
+  opacity: 0.8;
+  }
+/* back color for all modal footers */
+.modal-footer{
+  background-color:#f1f1f1
+  }
+/* for all the modals title */
+.modal-title{
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  }
+
+/* Center the image for sign up form*/
+.imgcontainer{
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+/* making the image round just like i did with the cards */
+img.avatar{
+  width: 50%;
+  border-radius: 50%;
+  }
+.formcontainer{
+  padding: 16px;
+  }
+
+/* Add padding and center-align text for delete modal */
+.deletemodal-body, .deletemodal-title {
+  text-align: center;
+  padding: 5px;
+  }
+/* Float yes and no buttons and add an equal width with styling */
+.yesbtn, .nobtn {
+  float: left;
+  width: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  padding: 14px 20px;
+  }
+/* Add a color to the yes button */
+.yesbtn {
+  background-color:red;
+  color: black;
+  width: 50%;  
+  }
+/* Add a color to the no button */
+.nobtn {
+  background-color:lightblue;
+  width: 50%;
+  }
+/* Add hover to the yes and no button */
+.yesbtn:hover, .nobtn:hover {
+  opacity:1.0;
+  }   
+
+/* styling for form input text boxes */
+.form-control{
+  border-radius: 50px;
+  }
+.custom-file-label{
+  border-radius: 25px 0px 0px 25px;
+  }
+
+

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 3rd party css stylesheet  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my css stylesheet, at end to take preferance for styles made -->
+    <link rel="stylesheet" href="EMP_stylings.css">
+    <!-- My Title -->
+    <title>End of Module Project Rework</title>
+</head>
+<body>
+    <!-- Start of wrapper -->
+    <div class ="wrapper">
+        <!-- Start of navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-secondary fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="lmjaaaaaas.png" alt="logo" style="width:50px; height: 40px;border-radius: 50%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News Feed</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Users
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Mary Hopkins</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Felix Brown</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Cassidy Creek</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Paul Mall</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Elana Rhoades</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Marlene soetwater</a>
+                    <a class="dropdown-item" href="#addu" data-toggle="modal" data-target="#addu"><i class="fa fa-user"></i> Add User</a>                    
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Admin</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-sm-2">
+                    <a class="nav-link" href="#"><i class="fa fa-facebook-official"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-reddit"></i></a>
+                    <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                    <button type="button" class="btn btn-secondary"data-toggle="modal" data-target="#loginmodal">
+                    Sign In <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addu">
+                    Sign Up / Add User <i class="fa fa-user"></i>
+                    </button>
+                </form>               
+            <!-- End of navbar collapse -->
+            </div>
+        <!-- End of navbar -->
+        </nav>
+        <header class="header">
+            <form class="form-inline my-2 my-lg-0"></form>
+            <h1>Welcome to lmj, a place where you can laugh you 
+                <input class="typebox" type="search" placeholder="_________." aria-label="Search"></h1>
+            </form>
+            <section>
+                <iframe class="iframe" src="https://www.youtube.com/embed/B7R8FWekrI0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </section>
+        </header>
+        <!-- content of webpage -->
+        <main class="main">
+            <!-- The Modal for Add User -->
+            <div class="modal fade" id="addu">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <!-- Modal for Add User Header -->
+                        <div class="modal-header">
+                            <h2 class="modal-title">Personal Info</h2>
+                            <button type="reset" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal for Add User body -->
+                        <div class="modal-body">
+                        <!-- Form for profile picture --> 
+                            <form>
+                                <h2 class="modal-title">Profile Picture</h2>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile" name="disp_p">
+                                    <label class="custom-file-label" for="customFile"> Choose Picture</label>
+                                </div>
+                            </form>
+                            <!-- sign-up Form for details and further details -->
+                            <form class="was-validated" method="GET" action="signup.html">
+                                <br>
+                                <h2 class="modal-title">Details</h2>
+                                <div class="form-group">
+                                    <label for="fname">Full Name:</label>                                    
+                                    <input type="text" class="form-control" id="fname" placeholder="Enter First and Last Name" name="fname" required>   
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information only using letters.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="E-Mail">E-Mail address:</label>
+                                    <input type="email" class="form-control" id="E-Mail" placeholder="Enter E-Mail Address" name="E-Mail" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cnum">Cellphone number:</label>
+                                    <input type="number" class="form-control" id="cnum" placeholder="Enter Cellphone number" name="cnum" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
+                                </div>   
+                                <div class="form-group">
+                                    <label for="lnum">Landline number:</label>
+                                    <input type="tel" class="form-control" id="lnum" placeholder="Enter Landline number" name="lnum" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
+                                </div>
+                                <h2 class="modal-title">Further Details</h2> 
+                                <div class="form-group">
+                                    <label for="addr">Home Adress:</label>
+                                    <input type="text" class="form-control" id="addr" placeholder="Enter Home Address" name="addr" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fname">Next of kin's Name and Surname:</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="Enter First and Last Name" name="fname" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information only using letters.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rela">Next of kin's relationship:</label>
+                                    <input type="text" class="form-control" id="rela" placeholder="Enter Next of kin's relationship" name="rela" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>        
+                                <div class="form-group">
+                                    <label for="cnum">Next of kin's Cellphone number:</label>
+                                    <input type="number" class="form-control" id="cnum" placeholder="Enter Cellphone number" name="cnum" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information only using numbers.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="E-Mail">Next of kin's E-Mail address:</label>
+                                    <input type="email" class="form-control" id="E-Mail" placeholder="Enter E-Mail Address" name="E-Mail" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>
+                                <h2 class="modal-title">Password</h2>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                        <div class="valid-feedback">Thank You</div>
+                                        <div class="invalid-feedback">Please enter required information.</div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember"> Remember me?
+                                    </label>
+                                </div>
+                                <button type="submit" class="formbutton">Submit</button>
+                            </form>
+                        </div>
+                        <!-- Modal for Add User footer -->
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                        </div>
+                    <!-- End of modal -->
+                    </div>
+                </div>
+            </div>
+            <!-- The Modal for Delete user -->
+            <div class="modal fade" id="deleteModal">
+                <div class="modal-dialog modal-sm" style="width:300px;height:30px;">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="deletemodal-header">
+                            <h3 class="deletemodal-title">Delete Account</h3>
+                        </div>  
+                        <!-- Modal body -->
+                        <div class="deletemodal-body">
+                            <p>Are you sure?</p>
+                            <button type="button" class="yesbtn" data-dismiss="card">Yes</button>
+                            <button type="button" class="nobtn" data-dismiss="modal">No</button>
+                        </div>                      
+                    </div>
+                </div>
+            <!-- Delete Modal close -->     
+            </div>
+            <!-- The modal for Sign in -->
+            <div class="modal fade" id="loginmodal" >
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <form class="was-validated" method="GET" action="signin.html">
+                        <div class="imgcontainer">
+                            <img src="usera.png" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="formcontainer">
+                            <div class="form-group">
+                                <label for="uname">Username:</label>
+                                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Remember me?
+                                </label>
+                            </div>
+                            <button type="submit" class="formbutton">Login</button>
+                            <span>Need an account? <a href="#addu" data-toggle="modal" data-target="#addu">Sign up</a></span>
+                        </div>
+                    </form>               
+                        <div class="formcontainer" style="background-color:#f1f1f1">
+                            <span class="psw" style="float: left;">Forgot <a href="#">password?</a></span>
+                            <button type="reset" class="btn btn-success" style="float: right;" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card/User 1 -->
+            <div class="card">
+                <img class="card-img-top" src="Mary Hopkins.jpg" alt="User image">
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Mary Hopkins</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: marymar@hotmail.com</p>
+                    <p class="card-text">Cellphone number: 076 354 2626</p>
+                    <p class="card-text">Landline number: 021 593 2700</p>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user1Modal">
+                        Further Details
+                    </button>
+                    <!-- Button to Open the Delete Modal -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                <!-- body close -->
+                </div>
+            <!-- card close -->
+            </div>
+                <!-- The user1 further details Modal -->
+                <div class="modal fade" id="user1Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+        	                    <p>Home address: 54 Gaimer Drive, Zeekovlei</p>
+        	                    <p>Next of kin's Name and Surname: Greg Hopkins</p>
+        	                    <p>Next of kin's relationship: Married</p>
+        	                    <p>Next of kin's cellphone number: N/A</p>
+        	                    <p>Next of kin's E-Mail address: g_manhopkins@gmail.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+            <!-- Card/User 2 -->
+            <div class="card">
+                <img class="card-img-top" src="Felix Brown.jpg" alt="User image">
+
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Felix Brown</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: felixbrown@hotmail.com</p>
+                    <p class="card-text">Cellphone number: 082 346 7823</p>
+                    <p class="card-text">Landline number: 021 564 2673</p>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user2Modal">
+                        Further Details
+                    </button>
+                <!-- Button to Open the Delete Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fa fa-trash"></i>
+                </button>
+
+                <!-- body close -->
+                </div>
+            <!-- card close -->           
+            </div>
+                <!-- The user2 further details Modal -->
+                <div class="modal fade" id="user2Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Home address: 14 Okavango Drive, Milnerton</p>
+                                <p>Next of kin's Name and Surname: Tracey Brown</p>
+                                <p>Next of kin's relationship: Married</p>
+                                <p>Next of kin's cellphone number: 082 346 5353</p>
+                                <p>Next of kin's E-Mail address: traceybrown@yahoo.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+            <!-- Card/User 3 -->
+            <div class="card">
+                <img class="card-img-top" src="Cassidy Creek.jpg" alt="User image">
+
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Cassidy Creek</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: cassiecreek@gmail.com</p>
+                    <p class="card-text">Cellphone number: 084 354 7873</p>
+                    <p class="card-text">Landline number: 022 593 7373</p>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user3Modal">
+                        Further Details
+                    </button>
+                <!-- Button to Open the Delete Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <!-- body close -->
+                </div>
+            <!-- card close --> 
+            </div>
+                <!-- The user3 further details Modal -->
+                <div class="modal fade" id="user3Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Home address: 69 Govender Street, Peakview</p>
+                                <p>Next of kin's Name and Surname: Melody Creek</p>
+                                <p>Next of kin's relationship: Parent</p>
+                                <p>Next of kin's cellphone number: 082 6868 9542</p>
+                                <p>Next of kin's E-Mail address: melcreek@gmail.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img class="card-img-top" src="Paul Mall.jpg" alt="User image">
+
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Paul Mall</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: hotshot25@gmail.com</p>
+                    <p class="card-text">Cellphone number: 082 300 7820</p>
+                    <p class="card-text">Landline number: 021 591 2673</p>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user4Modal">
+                        Further Details
+                    </button>
+                <!-- Button to Open the Delete Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <!-- body close -->
+                </div>
+            <!-- card close --> 
+            </div>
+                <!-- The user4 further details Modal -->
+                <div class="modal fade" id="user4Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Home address: 56 Marine Drive, Tafelsig</p>
+                                <p>Next of kin's Name and Surname: Pearle Mall</p>
+                                <p>Next of kin's relationship: Parent</p>
+                                <p>Next of kin's cellphone number: 082 950 5351</p>
+                                <p>Next of kin's E-Mail address: pearle_m@yahoo.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img class="card-img-top" src="Elana.jpg" alt="User image">
+
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Elana Rhoades</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: imsureyouknow@hotmail.com</p>
+                    <p class="card-text">Cellphone number: 076 555 0681</p>
+                    <p class="card-text">Landline number: 021 458 2953</p>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user5Modal">
+                        Further Details
+                    </button>
+                <!-- Button to Open the Delete Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <!-- body close -->
+                </div>
+            <!-- card close --> 
+            </div>
+                <!-- The user5 further details Modal -->
+                <div class="modal fade" id="user5Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Home address: 96 Stormhub Avenue, Fairways</p>
+                                <p>Next of kin's Name and Surname: Steve Longway</p>
+                                <p>Next of kin's relationship: Divorced</p>
+                                <p>Next of kin's cellphone number: 084 498 4726</p>
+                                <p>Next of kin's E-Mail address: mrlong@gmail.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img class="card-img-top" src="Marlene.jpg" alt="User image">
+
+                <!-- The Card Body with the Persons fullname as a title -->
+                <div class="card-body">
+                    <h4 class="card-title">Marlene Soetwater</h4>
+                    <!-- The info of the person -->   
+                    <p class="card-text">E-Mail address: msoetie@gmail.com</p>
+                    <p class="card-text">Cellphone number: 081 687 4100</p>
+                    <p class="card-text">Landline number: 022 574 2852</p>  
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user6Modal">
+                        Further Details
+                    </button>
+                <!-- Button to Open the Delete Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <!-- body close -->
+                </div>
+            <!-- card close --> 
+            </div>
+                <!-- The user6 further details Modal -->
+                <div class="modal fade" id="user6Modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Further Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+        
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <p>Home address: 4 Apostle Way, Kappieswegfontein</p>
+                                <p>Next of kin's Name and Surname: Cedric Soetwater</p>
+                                <p>Next of kin's relationship: Married</p>
+                                <p>Next of kin's cellphone number: 072 985 6284</p>
+                                <p>Next of kin's E-Mail address: cedricis_soet@gmail.com</p>
+                            </div>
+        
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        <!-- closing of modal content -->
+                        </div>
+                    <!-- closing of modal dialog -->
+                    </div>
+                <!-- closing of modal -->
+                </div>
+        </main>
+        <!-- footer content -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="lmjaaaaaas.png" alt="logo" style="width:150px; height: 150px;border-radius: 50%;justify-content: center;">
+                        <h6 style="justify-content: center;">© 2020 lmj Copyright:</h6>
+                        <h6 style="justify-content: center;">Ready to try lmj? It's free!</h6>
+                        <h6 style="justify-content: center;"><a class="footer-link" href="#" data-toggle="modal" data-target="#addu">Sign Up HERE!</a></h6>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul><h4>Features</h4></ul>
+                        <ul><a class="footer-link" href="#">About the movement</a></ul>
+                        <ul><a class="footer-link" href="#">FAQ's</a></ul>
+                        <ul><a class="footer-link" href="#">Support us</a></ul>
+                    </li>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul><h4>Quick Contact</h4></ul>
+                        <ul><p><i class="fa fa-phone-square"></i> (021) 596 2478</p></ul>
+                        <ul><p><i class="fa fa-envelope"></i> lmj@gmail.com</p></ul>
+                        <ul><p><i class="fa fa-home"></i> 80 Surrey Hills, Welligton. 7506</p></ul>
+                        <ul><a class="footer-link" href="#Top">Up<i class="fa fa-arrow-up"></i></a></ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul><h4>Follow us</h4></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-facebook-official"></i> lmj/facebook.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-instagram"></i> lmj/instagram.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-reddit"></i> lmj/reddit.com</a></ul>
+                        <ul><a class="footer-link" href="#"><i class="fa fa-twitter"></i> lmj/twitter.com</a></ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- End of wrapper -->    
+    </div>
+    <!-- The Js applied Before closing body tag for performance -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
